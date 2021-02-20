@@ -21,7 +21,7 @@ public class DefaultMatrix extends Matrix {
    * any external changes to the underlying array will affect that matrix as well.
    * @param matrix matrix values
    */
-  DefaultMatrix(final float[][] matrix) {
+  public DefaultMatrix(final float[][] matrix) {
     super(matrix.length, matrix[0].length);
     mData = matrix;
   }
@@ -31,7 +31,7 @@ public class DefaultMatrix extends Matrix {
    * @param rows number of rows
    * @param cols number of columns
    */
-  DefaultMatrix(final int rows, final int cols) {
+  public DefaultMatrix(final int rows, final int cols) {
     this(new float[rows][cols]);
   }
 
