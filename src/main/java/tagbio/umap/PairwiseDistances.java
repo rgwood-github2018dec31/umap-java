@@ -19,7 +19,7 @@ public class PairwiseDistances {
 
   private PairwiseDistances() { }
 
-  static Matrix pairwiseDistances(final Matrix x, final Metric metric) {
+  public static Matrix pairwiseDistances(final Matrix x, final Metric metric) {
     if (PrecomputedMetric.SINGLETON.equals(metric)) {
       return x;
     }
@@ -34,7 +34,7 @@ public class PairwiseDistances {
     return new DefaultMatrix(distances);
   }
 
-  static Matrix pairwiseDistances(final Matrix x, final Matrix y, final Metric metric) {
+ public static Matrix pairwiseDistances(final Matrix x, final Matrix y, final Metric metric) {
     if (PrecomputedMetric.SINGLETON.equals(metric)) {
       throw new IllegalArgumentException("Cannot use this method with precomputed");
     }
